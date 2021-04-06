@@ -6,5 +6,5 @@ COPY . .
 
 RUN yarn build
 FROM nginx
-EXPOSE 80
+EXPOSE 5000
 COPY --from=0 /app/dist /usr/share/nginx/html
