@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:alpine as builder
 WORKDIR '/app'
 COPY package.json . 
 RUN yarn
@@ -7,4 +7,4 @@ RUN yarn build
 
 FROM nginx
 EXPOSE 80
-COPY --from=0 /app/dist /usr/share/nginx/html
+COPY --from=builder /app/dist /usr/share/nginx/html
