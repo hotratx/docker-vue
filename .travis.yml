@@ -7,15 +7,3 @@ before_install:
 
 script:
   - docker run mgviero/docker-vue yarn lint 
-
-deploy:
-  provider: elasticbeanstalk
-  region: "us-east-2"
-  app: "docker_site"
-  env: "Dockersite-env-2"
-  bucket_name: "elasticbeanstalk-us-east-2-614365341039"
-  bucket_path: "docker_site"
-  on:
-    branch: master
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
