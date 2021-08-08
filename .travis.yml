@@ -6,7 +6,7 @@ before_install:
   - docker build -t mgviero/docker-vue -f Dockerfile.dev .
 
 script:
-  - docker run mgviero/docker-vue yarn lint 
+  - docker run mgviero/docker-vue npm run lint 
 
 deploy:
   provider: elasticbeanstalk

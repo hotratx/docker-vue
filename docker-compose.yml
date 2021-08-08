@@ -16,4 +16,4 @@ services:
     volumes:
       - /app/node_modules
       - .:/app   
-    command: ["yarn","lint"]
+    command: ["npm","run","lint"]
