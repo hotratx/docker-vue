@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Alteração de user aws"/>
+    <HelloWorld msg="Novo app aws em novo servidor sa-east-1"/>
   </div>
 </template>
 
